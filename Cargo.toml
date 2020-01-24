@@ -1,0 +1,14 @@
+[package]
+name = "erase-pe-header"
+description = "This library helps you to overwrite the portable-executable header with zeroes."
+documentation = "https://docs.rs/erase-pe-header/"
+repository = "https://github.com/DeepRobin/erase-pe-header"
+readme = "README.md"
+version = "0.1.0"
+authors = ["Robin Lindner <robin@deeprobin.de>"]
+edition = "2018"
+keywords = ["memory", "windows", "winsdk"]
+license = "MIT"
+
+[target.'cfg(windows)'.dependencies]
+winapi = { version = "^0.3.8", features = ["memoryapi", "libloaderapi"] }
